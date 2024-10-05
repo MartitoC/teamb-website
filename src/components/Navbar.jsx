@@ -23,7 +23,7 @@ const Navbar = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="#about" className="text-lg mx-5  text-gray-800 hover:text-gray-500 font-medium">
+                        <a href="#nosotros" className="text-lg mx-5  text-gray-800 hover:text-gray-500 font-medium">
                             Nosotros
                         </a>
                     </li>

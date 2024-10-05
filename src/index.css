@@ -7,11 +7,16 @@
 :root {
   font-family: "Afacad Flux", sans-serif;
   font-optical-sizing: auto;
+  
 }
 html {
   scroll-behavior: smooth;
+  
 }
-
+body {
+  margin: 0;
+  padding: 0;
+}
  a {
   color: black;
   text-decoration: none;
