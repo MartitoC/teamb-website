@@ -29,11 +29,10 @@ const Nosotros = () => {
         ></div>
       </div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl lg:mx-0">
+        <div className="mx-auto max-w-5xl lg:mx-0">
           <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Nosotros</h2>
           <p className="mt-6 text-lg leading-5 text-gray-300">
-          En TeamB, somos un equipo especializado en diseño y desarrollo de software con un enfoque centrado en la innovación y la calidad. Ofrecemos soluciones tecnológicas personalizadas para ayudar a las empresas a alcanzar sus objetivos, desde aplicaciones móviles y web hasta sistemas completos de gestión.
-          </p>
+          En TeamB, somos un equipo especializado en diseño y desarrollo de software con un enfoque centrado en la innovación y la calidad. Ofrecemos soluciones tecnológicas personalizadas para ayudar a las empresas a alcanzar sus objetivos, desde aplicaciones móviles y web hasta sistemas completos de gestión. Nos apasiona la tecnología y trabajamos mano a mano con nuestros clientes, asegurando que cada proyecto sea una herramienta eficiente, escalable y alineada con sus necesidades. En TeamB, tu éxito es nuestro compromiso.</p>
         </div>
         
         </div>
