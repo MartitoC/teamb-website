@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet')
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Afacad Flux", sans-serif;
+  font-optical-sizing: auto;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+ a {
+  color: black;
+  text-decoration: none;
+ }
+
+html {
+  scroll-behavior: smooth;
+}
