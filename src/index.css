@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet')
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 :root {
   font-family: "Afacad Flux", sans-serif;
@@ -24,4 +25,53 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+.bg-azul-principal-oscuro {
+  background-color: #003B5C;
+}
+
+.bg-azul-muy-oscuro {
+  background-color: #001F33;
+}
+
+.bg-gris-oscuro {
+  background-color: #C0C4C8;
+}
+
+.bg-verde-oscuro {
+  background-color: #5A8A6C;
+}
+
+.bg-negro {
+  background-color: #000000;
+}
+
+.img-negativo {
+  filter: invert(100%);
+}
+
+.h-100-screen{
+  height: calc(100vh - 63.999px);
+}
+
+.height-screen {
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+
+@media (min-width: 641px) {
+  .height-screen {
+    height: 100vh;
+  }
+}
+
+.card {
+  transition: transform 0.3s ease-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
