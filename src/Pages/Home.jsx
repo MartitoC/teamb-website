@@ -35,7 +35,7 @@ const Home = () => {
                             En TeamB, transformamos tus ideas en soluciones digitales personalizadas. Somos expertos en diseño de software a medida, trabajando codo a codo contigo para crear herramientas innovadoras que impulsen tu negocio.
                         </p>
                         <div className="mt-10 flex items-center justify-center gap-x-6">
-                            <a href="#" className="rounded-md bg-azul-muy-oscuro px-3.5 py-2.5 text-xl font-semibold text-white shadow-sm hover:bg-sky-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                            <a href="#" className="rounded-md bg-white px-3.5 py-2.5 text-xl font-semibold  shadow-sm text-gray-700 hover:bg-sky-900 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                                 Agenda una reunión
                             </a>
                         </div>

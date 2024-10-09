@@ -12,6 +12,7 @@ function App() {
       <Home />
       <Services />
       <Nosotros />
+      <Contacto />
     </>
   );
 }

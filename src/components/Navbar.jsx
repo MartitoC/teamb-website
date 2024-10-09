@@ -32,7 +32,7 @@ const Navbar = () => {
                     <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-sky-900 hover:text-white">Home</a>
                     <a href="#services" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-sky-900 hover:text-white">Servicios</a>
                     <a href="#about " class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-sky-900 hover:text-white">Nosotros</a>
-                    <a href="#contactos" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-sky-900 hover:text-white">Contactos</a>
+                    <a href="#contacto" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-sky-900 hover:text-white">Contacto</a>
                 </div>
                 </div>
             </div>
