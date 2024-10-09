@@ -15,7 +15,7 @@ services:
       - ./etc/nginx/nginx.conf:/etc/nginx/nginx.conf
       - /etc/letsencrypt:/etc/letsencrypt
     depends_on:
-      - app
+      - temb-app
 
 volumes:
   certs:
