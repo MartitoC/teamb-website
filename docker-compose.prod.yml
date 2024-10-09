@@ -2,9 +2,9 @@ services:
   teamb-app:
     build:
       context: .
-      dockerfile: Dockerfile.prod 
+      dockerfile: Dockerfile.prod
     ports:
-      - "3000:3000"  # Esto es opcional
+      - "3000:3000" 
 
   nginx:
     image: nginx:latest
