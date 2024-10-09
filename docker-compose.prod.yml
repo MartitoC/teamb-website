@@ -1,14 +1,20 @@
-version: '3.8'
+version: '3'
 
 services:
   teamb-app:
     build:
       context: .
-      dockerfile: Dockerfile.prod
-    volumes:
-      - /etc/letsencrypt:/etc/letsencrypt:ro # Montar los certificados
+      dockerfile: Dockerfile.prod 
     ports:
-      - "80:80" 
+      - "3000:3000"  # Esto es opcional
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
       - "443:443"
-    environment:
-      - NODE_ENV=production
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - /etc/letsencrypt:/etc/letsencrypt  # Monta el directorio de certificados
+    depends_on:
+      - teamb-app
