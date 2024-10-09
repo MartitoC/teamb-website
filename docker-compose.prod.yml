@@ -1,8 +1,8 @@
 version: "3.9"
 
 services:
-  teamb-app:
-    container_name: teamb-app;
+  teambapp:
+    container_name: teambapp;
     build:
       context: .
       dockerfile: Dockerfile.prod
@@ -16,7 +16,7 @@ services:
     ports:
       - 80:80
     links:
-      - teamb-app
+      - teambapp
       - nginx-proxy
       - letsencrypt
     environment:
