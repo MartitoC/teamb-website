@@ -12,7 +12,7 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./etc/nginx/nginx.conf:/etc/nginx/nginx.conf  # Montar el archivo completo de nginx.conf
       - /etc/letsencrypt:/etc/letsencrypt  # Monta el directorio de certificados
     depends_on:
       - teamb-app
