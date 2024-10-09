@@ -5,7 +5,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.prod
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt:ro # Montar los certificados
     ports:
       - "80:80" 
+      - "443:443"
     environment:
       - NODE_ENV=production
