@@ -6,6 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile.prod
     volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf 
       - /etc/letsencrypt:/etc/letsencrypt:ro # Montar los certificados
     ports:
       - "80:80" 
