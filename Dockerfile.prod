@@ -1,32 +1,15 @@
-# Etapa 1: Construcción de la aplicación
-FROM node:18-alpine AS build
+FROM node:14
 
-# Establecer el directorio de trabajo en el contenedor
 WORKDIR /app
 
-# Copiar package.json y package-lock.json para instalar las dependencias
-COPY package*.json ./
+COPY . /app
 
-# Instalar dependencias
 RUN npm install
 
-# Copiar el resto del código fuente
-COPY . .
+RUN npm i -g serve
 
-# Generar la build de producción
 RUN npm run build
 
-# Etapa 2: Servir la aplicación
-FROM node:18-alpine AS production
+EXPOSE 5000
 
-# Establecer el directorio de trabajo en el contenedor
-WORKDIR /app
-
-# Copiar solo los archivos necesarios de la etapa de construcción
-COPY --from=build /app/dist /usr/share/nginx/html
-
-# Instalar un servidor estático
-RUN npm install -g serve
-
-# Comando para iniciar el servidor
-CMD ["serve", "-s", "build", "-l", "3000"]
+CMD["serve","-s","build"]
