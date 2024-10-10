@@ -21,7 +21,7 @@ services:
       - letsencrypt
     environment:
       - VIRTUAL_HOST=teamb.com.py,www.teamb.com.py
-      - LETSENCRYPS_HOST=https://teamb.com.py,https://www.teamb.com.py
+      - LETSENCRYPS_HOST=teamb.com.py,www.teamb.com.py
     restart: always
 
   nginx-proxy:
