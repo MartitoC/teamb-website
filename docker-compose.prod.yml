@@ -8,6 +8,8 @@ services:
       dockerfile: Dockerfile.prod
     ports:
       - "3000:3000"
+    volumes:
+      - ./dist:/usr/share/nginx/html
 
   nginx:
     build: ./nginx
