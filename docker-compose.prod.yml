@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: Dockerfile.prod
     ports:
-      - "5000:5000"
+      - "3000:3000"
 
   nginx:
     build: ./nginx
