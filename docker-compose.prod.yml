@@ -9,14 +9,12 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - .:/usr/src/app
+      - ./dist:/usr/share/nginx/html
 
   nginx:
     build: ./nginx
     ports:
       - 80
-    volumes:
-      - ./dist:/usr/src/app/dist
     links:
       - teambapp
       - nginx-proxy
