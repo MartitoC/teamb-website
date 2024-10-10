@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   teambapp:
-    container_name: teambapp;
+    container_name: teambapp
     build:
       context: .
       dockerfile: Dockerfile.prod
