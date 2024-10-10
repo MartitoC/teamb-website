@@ -1,14 +1,34 @@
-version: '3.8'
-
 services:
-  teamb-app:
-    build: .
+  website:
+    build:
+      context: website
+      dockerfile: Dockerfile
+    container_name: teamb-app
+    restart: always
     ports:
-      - "5173:5173"
-      - "4173:4173"
-    volumes:
-      - .:/app
-      - /app/node_modules
-    command: npm run dev -- --host 0.0.0.0
+      - "3000:3000"
     environment:
-      - NODE_ENV=development
+      - VIRTUAL_HOST=teamb.com.py,www.teamb.com.py
+      - VIRTUAL_PORT=3000
+      - LETSENCRYPT_HOST=teamb.com.py,www.teamb.com.py
+
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - certs:/etc/nginx/certs:ro
+      - vhostd:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+
+  letsencrypt-nginx-proxy-companion:
+    image: jrcs/letsencrypt-nginx-proxy-companion
+    restart: always
+    volumes_from:
+      - nginx-proxy
+    volumes:
+      - certs:/etc/nginx/certs:rw
+      - /var/run/docker.sock:/var/run/docker.sock:ro
