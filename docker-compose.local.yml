@@ -1,0 +1,27 @@
+services:
+  website:
+    build:
+      context: website
+      dockerfile: Dockerfile
+    container_name: teamb-app
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - VIRTUAL_HOST=0.0.0.0
+      - VIRTUAL_PORT=3000
+
+  backend:
+    build:
+      context: server
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+
+volumes:
+  certs:
+  html:
+  vhostd:

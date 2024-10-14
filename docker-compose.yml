@@ -12,6 +12,16 @@ services:
       - VIRTUAL_PORT=3000
       - LETSENCRYPT_HOST=teamb.com.py,www.teamb.com.py
 
+  backend:
+    build:
+      context: server
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+
   nginx-proxy:
     image: jwilder/nginx-proxy
     restart: always
