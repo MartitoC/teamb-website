@@ -21,9 +21,9 @@ services:
       - "5000:5000"
     environment:
     - NODE_ENV=production
-    - VIRTUAL_HOST=teamb.com.py,www.teamb.com.py
+    - VIRTUAL_HOST=api.teamb.com.py,www.api.teamb.com.py
     - VIRTUAL_PORT=5000
-    - LETSENCRYPT_HOST=teamb.com.py,www.teamb.com.py
+    - LETSENCRYPT_HOST=api.teamb.com.py,www.api.teamb.com.py
 
   nginx-proxy:
     image: jwilder/nginx-proxy
