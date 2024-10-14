@@ -5,11 +5,11 @@ const nodemailer = require('nodemailer');
 
 const app = express();
 app.use(cors({
-  origin: 'https://teamb.com.py/api:3000'
+  origin: 'https://teamb.com.py:3000'
 }));
 app.use(express.json());
 
-app.post('/send-email', async (req, res) => {
+app.post('/api/send-email', async (req, res) => {
   const { nombre, email, mensaje, telefono } = req.body;
 
   const transporter = nodemailer.createTransport({
