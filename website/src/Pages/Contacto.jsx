@@ -16,7 +16,7 @@ const Contacto = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('http://teamb.com.py:5000/api/send-email', {
+    const response = await fetch('https://teamb.com.py:5000/api/send-email', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),

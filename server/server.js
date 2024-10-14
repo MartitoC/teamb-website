@@ -5,7 +5,7 @@ const nodemailer = require('nodemailer');
 
 const app = express();
 app.use(cors({
-  origin: 'http://teamb.com.py:3000'
+  origin: 'https://teamb.com.py:3000'
 }));
 app.use(express.json());
 
